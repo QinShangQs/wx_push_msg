@@ -12,7 +12,7 @@ log日志目录 chmod -R 777 log/
 进入src目录，执行php test.php
 
 ###########测试推送客服消息配置############
-cd /mnt/www/wxExtras/src; php WechatPush.class.php 1 test >> wp_test_1.log
+cd /mnt/www/wx-push-msg/src; php WechatPush.class.php 1 test >> wp_test_1.log
 
 ############推送客服消息配置############
 #查看是否有运行
@@ -21,11 +21,11 @@ crontab -l
 #进入编辑模式
 crontab -e 
 #加入以下行，每小时从8分开始执行，"1"代表页码，每页10000粉丝，"product"代表生产模式且(IS_ON_LINE为true)，另外还有"test","dev"
-8 * * * * cd /mnt/www/wxExtras/src; php WechatPush.class.php 1 product >> wp_1.log
-9 * * * * cd /mnt/www/wxExtras/src; php WechatPush.class.php 2 product >> wp_2.log
-10 * * * * cd /mnt/www/wxExtras/src; php WechatPush.class.php 3 product >> wp_3.log
-11 * * * * cd /mnt/www/wxExtras/src; php WechatPush.class.php 4 product >> wp_4.log
-12 * * * * cd /mnt/www/wxExtras/src; php WechatPush.class.php 5 product >> wp_5.log
+8 * * * * cd /mnt/www/wx-push-msg/src; php WechatPush.class.php 1 product >> wp_1.log
+9 * * * * cd /mnt/www/wx-push-msg/src; php WechatPush.class.php 2 product >> wp_2.log
+10 * * * * cd /mnt/www/wx-push-msg/src; php WechatPush.class.php 3 product >> wp_3.log
+11 * * * * cd /mnt/www/wx-push-msg/src; php WechatPush.class.php 4 product >> wp_4.log
+12 * * * * cd /mnt/www/wx-push-msg/src; php WechatPush.class.php 5 product >> wp_5.log
 
 #保存退出
 wq

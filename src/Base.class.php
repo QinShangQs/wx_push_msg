@@ -10,6 +10,8 @@ class Base {
 	protected $_db = null;
 	protected $_wxApi = null;
 	
+	protected $_console_domain = "http://mcc.hrwq.com/";
+	
 	public function __construct(){
 		$dbConfig = array(
 				'host' => HOST,

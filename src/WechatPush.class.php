@@ -67,7 +67,7 @@ class WechatPush extends Base {
 		$item = array();
 		$item['title'] = html_entity_decode($dbMessage['title']);
 		$item['url'] = (stripos ($dbMessage['url'], "?") ? $dbMessage['url'] : ($dbMessage['url']."?") ) ."&pid=ra&v=".$push_time;
-		$item['picurl'] = $dbMessage['picurl'];
+		$item['picurl'] = $this->_console_domain . $dbMessage['picurl'];
 		$item['description'] = $dbMessage['description'];
 		
 		$sendMsg = array (
