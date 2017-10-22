@@ -18,7 +18,7 @@ class WechatPush extends Base {
 	 * @param unknown $mode 模式
 	 */
 	public function run($page, $mode) {
-		$push_time = date ( "Ymd_H" );
+		$push_time = date ( "Y-m-d_H" );
 		$task = $push_time."_{$page}";
 
 		$dbMessage = $this->getDbMessage ($push_time);
