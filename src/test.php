@@ -34,7 +34,7 @@ function testDB(){
 			'dbname' => DB_NAME
 	);
 	$db = new DB($dbConfig);
-	$row = $db->db_getRow("select * from jieqi_system_users order by uid desc limit 1;");
+	$row = $db->db_getRow("select * from `user` order by id desc limit 1;");
 
 	Log::_echo($row ?  'databases connnection is successful!':'databases connnection is fail!');
 }
