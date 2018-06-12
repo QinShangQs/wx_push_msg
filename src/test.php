@@ -10,6 +10,7 @@ Log::_echo("PATH_LIB = ". PATH_LIB);
 Log::_echo("HOST = ". HOST);
 Log::_echo("USER = ". USER);
 Log::_echo("PWD = ". PWD);
+Log::_echo("PORT = ". PORT);
 Log::_echo("DB_NAME = ". DB_NAME);
 Log::_echo("WEIXIN_APPID = ". WEIXIN_APPID);
 Log::_echo("WEIXIN_APPSECRET = ". WEIXIN_APPSECRET);

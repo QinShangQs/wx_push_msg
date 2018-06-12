@@ -109,7 +109,9 @@ class WechatApi {
 	function send_template_mssage($data) {
 		$access_token = $this->get_access_token();
 		$url = "https://api.weixin.qq.com/cgi-bin/message/template/send?access_token={$access_token}";
-		return $this->http_request ( $url, $data );
+		$result = $this->http_request ( $url, $data );
+                $this->reget_access_token($result, $access_token);
+                return $result;
 	}
 	
 	/**
@@ -147,14 +149,16 @@ class WechatApi {
 	/**
 	 * 发送客服消息
 	 *
-	 * @param unknown $data
+	 * @param string $data
 	 *        	经过json_encode
 	 * @return 返回发送结果
 	 */
 	public function send_custom_msg($data) {
 		$access_token = $this->get_access_token ();
 		$url = "https://api.weixin.qq.com/cgi-bin/message/custom/send?access_token=" . $access_token;
-		return $this->http_request ( $url, $data );
+		$result = $this->http_request ( $url, $data );
+                $this->reget_access_token($result, $access_token);
+                return $result;
 	}
 	
 }

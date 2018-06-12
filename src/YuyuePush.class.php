@@ -22,15 +22,15 @@ class YuyuePush extends Base {
 			$openId = $openids[$i];
 			$tmpMsg['touser'] = $openId;
 			$result = $this->_wxApi->send_template_mssage(json_encode($tmpMsg));
-			Log::_write($task, "{$openId}\t".json_encode($result) );
+			Log::_write($task, "{$i}/{$total_count}:{$openId}\t".json_encode($result) );
 			if($result['errcode'] == 0){
 				$success_count ++ ;
 			}
-			
-			Log::_write($task, "===============================================================================");
-			Log::_write($task, "总数：{$total_count}\t成功:{$success_count}\t失败:".($total_count-$success_count));
-			Log::_write($task, "===============================================================================");
 		}
+                
+                Log::_write($task, "===============================================================================");
+		Log::_write($task, "总数：{$total_count}\t成功:{$success_count}\t失败:".($total_count-$success_count));
+		Log::_write($task, "===============================================================================");
 	}
 
 	
