@@ -11,3 +11,5 @@ _mode_validate($mode);
 $base = new Base();
 $funs = $base->getSubscribers($mode);
 echo count($funs);
+
+//test
