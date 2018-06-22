@@ -48,7 +48,7 @@ class YuyuePush extends Base {
         $data = array(
             'touser' => '',
             'template_id' => $templateId,
-            'url' => "http://m.hrwq.com/vcourse/detail/68",
+            'url' => "http://m.hrwq.com/vcourse/detail/69",
             'topcolor' => '',
             'data' => array(
                 'first' => array(
@@ -68,7 +68,7 @@ class YuyuePush extends Base {
                     'color' => '#0000cc'
                 ),
                 'keyword4' => array(
-                    'value' => ("2018-6-18 19:00\n"),
+                    'value' => ("2018-6-25\n"),
                     'color' => '#0000cc'
                 ),
                 'remark' => array(
