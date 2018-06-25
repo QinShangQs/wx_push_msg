@@ -42,7 +42,7 @@ class YuyuePush extends Base {
         if ($mode == ENV_DEV) {
             $templateId = "PkByMzb2wJq5KN5q47BJCoZFPgxRgTxHdOAnKl53BHA";
         } else {
-            $templateId = "QMzY4llcOtuzacTErWVgIKYVOHJ3OwK8eGwb8abspPQ";
+            $templateId = "Ntu25MWeIO8LrjKHsULH3ZPAV6nMKvMLcehQVfPcOWg";
         }
 
         $data = array(
