@@ -17,7 +17,7 @@ class YuyuePush extends Base {
     public function run($page, $mode) {
         $task = "yuyue_{$page}_{$mode}";
 
-        $openids = parent::getSubscribers($mode);
+        $openids = $this->getOpenIds($mode);
         $tmpMsg = $this->getTemplateMsg($mode);
         $total_count = count($openids);
         $success_count = 0;
@@ -36,39 +36,52 @@ class YuyuePush extends Base {
         Log::_write($task, "总数：{$total_count}\t成功:{$success_count}\t失败:" . ($total_count - $success_count));
         Log::_write($task, "===============================================================================");
     }
+    
+    private function getOpenIds($mode) {
+        $sql = "select openid, id, nickname,mobile,realname from `user` where vip_flg = 2";
+        if($mode != ENV_PRODUCT){
+            $sql .= " and openid in ('ot3XZtyEcBJWjpXJxxyqAcpBCdGY','obpqNs_GdrHPLOGJig50qNcFZRGk')";
+        }
+        $rows = $this->_db->db_getAll($sql);
+        $datas = array();
+        foreach ($rows as $k => $v) {
+            $datas[] = $v['openid'];
+        }
+        return $datas;
+    }
 
     private function getTemplateMsg($mode) {
         $templateId = null;
-        if ($mode == ENV_DEV) {
-            $templateId = "PkByMzb2wJq5KN5q47BJCoZFPgxRgTxHdOAnKl53BHA";
+        if ($mode != ENV_PRODUCT) {
+            $templateId = "_xREyt32ZoWlQjbPIKlNIGjKh8CmdwLiJ0DBRoPpYos";
         } else {
-            $templateId = "Ntu25MWeIO8LrjKHsULH3ZPAV6nMKvMLcehQVfPcOWg";
+            $templateId = "tU28-BPSh2lkO787wsd071N4L_pMpHHH1XWvQOcgmhM";
         }
 
         $data = array(
             'touser' => '',
             'template_id' => $templateId,
-            'url' => "http://m.hrwq.com/vcourse/detail/69",
+            'url' => "http://m.hrwq.com/vcourse/detail/70",
             'topcolor' => '',
             'data' => array(
                 'first' => array(
-                    'value' => ("本周和会员新课上线通知\n"),
+                    'value' => ("本周和会员新课即将上线\n"),
                     'color' => '#0000cc'
                 ),
                 'keyword1' => array(
-                    'value' => ("教育孩子父母应有的成长性思维\n"),
+                    'value' => ("如何走近孩子的心？\n"),
                     'color' => '#0000cc'
                 ),
                 'keyword2' => array(
-                    'value' => ("贾语凡老师\n"),
+                    'value' => ("走进孩子的心，指导思想+特别强调，距离不再是距离。\n"),
                     'color' => '#0000cc'
                 ),
                 'keyword3' => array(
-                    'value' => ("通过成长性思维更加有效教育孩子\n"),
+                    'value' => ("范欣园老师\n"),
                     'color' => '#0000cc'
                 ),
                 'keyword4' => array(
-                    'value' => ("2018-6-25\n"),
+                    'value' => ("2018-7-2\n"),
                     'color' => '#0000cc'
                 ),
                 'remark' => array(
