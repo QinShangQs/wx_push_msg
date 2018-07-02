@@ -52,7 +52,7 @@ class YuyuePush extends Base {
 
     private function getTemplateMsg($mode) {
         $templateId = null;
-        if ($mode != ENV_PRODUCT) {
+        if ($mode == ENV_DEV) {
             $templateId = "_xREyt32ZoWlQjbPIKlNIGjKh8CmdwLiJ0DBRoPpYos";
         } else {
             $templateId = "tU28-BPSh2lkO787wsd071N4L_pMpHHH1XWvQOcgmhM";
