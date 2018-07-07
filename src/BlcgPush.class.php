@@ -1,6 +1,9 @@
 <?php
 
 include_once 'Base.class.php';
+
+die('注销本行后运行' . PHP_EOL);
+
 /**
  * 办理成功通知，只用一次
  * @author qinshang
