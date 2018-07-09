@@ -3,7 +3,7 @@
 
 /**
  * 
- * 给VIP用户增加课程7，只用一次
+ * 给指导师和合伙人用户增加课程7，只用一次
  * php VipCourse.class.php dev
  * @author qyd
  */
@@ -47,7 +47,7 @@ class VipCourse extends Base {
     }
 
     private function _getVipUsers() {
-        $sql = "select openid, id, nickname,mobile,realname from `user` where vip_flg = 2";
+        $sql = "select openid, id, nickname,mobile,realname from `user` where role in(2,3)";
         $rows = $this->_db->db_getAll($sql);
         return $rows;
     }
