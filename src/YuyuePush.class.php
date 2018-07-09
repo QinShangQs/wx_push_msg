@@ -61,7 +61,7 @@ class YuyuePush extends Base {
         $data = array(
             'touser' => '',
             'template_id' => $templateId,
-            'url' => "http://m.hrwq.com/vcourse/detail/70",
+            'url' => "http://m.hrwq.com/vcourse/detail/71",
             'topcolor' => '',
             'data' => array(
                 'first' => array(
@@ -69,11 +69,11 @@ class YuyuePush extends Base {
                     'color' => '#0000cc'
                 ),
                 'keyword1' => array(
-                    'value' => ("如何走近孩子的心？\n"),
+                    'value' => ("身为父母的你，或许还未成熟？\n"),
                     'color' => '#0000cc'
                 ),
                 'keyword2' => array(
-                    'value' => ("走进孩子的心，指导思想+特别强调，距离不再是距离。\n"),
+                    'value' => ("3项成熟父母的重要表征，你不再拒绝长大，就是引领孩子成长的开端。\n"),
                     'color' => '#0000cc'
                 ),
                 'keyword3' => array(
@@ -81,7 +81,7 @@ class YuyuePush extends Base {
                     'color' => '#0000cc'
                 ),
                 'keyword4' => array(
-                    'value' => ("2018-7-2\n"),
+                    'value' => ("2018-7-9\n"),
                     'color' => '#0000cc'
                 ),
                 'remark' => array(
