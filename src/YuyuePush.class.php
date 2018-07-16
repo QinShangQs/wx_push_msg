@@ -61,7 +61,7 @@ class YuyuePush extends Base {
         $data = array(
             'touser' => '',
             'template_id' => $templateId,
-            'url' => "http://m.hrwq.com/vcourse/detail/71",
+            'url' => "http://m.hrwq.com/vcourse/detail/72",
             'topcolor' => '',
             'data' => array(
                 'first' => array(
@@ -69,19 +69,19 @@ class YuyuePush extends Base {
                     'color' => '#0000cc'
                 ),
                 'keyword1' => array(
-                    'value' => ("身为父母的你，或许还未成熟？\n"),
+                    'value' => ("当代父母须具备的家教理念\n"),
                     'color' => '#0000cc'
                 ),
                 'keyword2' => array(
-                    'value' => ("3项成熟父母的重要表征，你不再拒绝长大，就是引领孩子成长的开端。\n"),
+                    'value' => ("家庭教育这个系统工程中，父母应具备哪些家教理念呢？\n"),
                     'color' => '#0000cc'
                 ),
                 'keyword3' => array(
-                    'value' => ("范欣园老师\n"),
+                    'value' => ("贾容韬老师\n"),
                     'color' => '#0000cc'
                 ),
                 'keyword4' => array(
-                    'value' => ("2018-7-9\n"),
+                    'value' => ("2018-7-16\n"),
                     'color' => '#0000cc'
                 ),
                 'remark' => array(
